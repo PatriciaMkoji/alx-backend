@@ -34,5 +34,6 @@ class FIFOCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
+        """ Gets items fron Cache """
         if key is not None:
             return self.cache_data.get(key, None)
