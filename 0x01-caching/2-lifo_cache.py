@@ -20,6 +20,7 @@ class LIFOCache(BaseCaching):
         super().__init__()
 
     def put(self, key, item):
+        """ Add items in the Cache """
         if key is not None or item is not None:
             if len(self.cache_data) >= self.MAX_ITEMS:
                 # Discard last item (LIFO)
